@@ -6,12 +6,15 @@ class Triangle
     @side_1 = sides[0]
     @side_2 = sides[1]
     @side_3 = sides[2]
-    binding.pry
   end
 
   define_method(:triangle?) do
-    if @side_1 + @side_2 >= @side_3 #|| @side_1 + @side_3 <=@side_2 || @side_2+@side_3 <= side_1
-      true
+    if @side_1 + @side_2 >= @side_3
+      if @side_1 == (@side_2 && @side_3)
+        "Equilateral Triangle"
+      else
+        "different"
+      end
     else
       false
     end
