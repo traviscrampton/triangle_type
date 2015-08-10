@@ -8,8 +8,8 @@ describe('the triangle path', {:type => :feature}) do
     visit('/')
     fill_in('side 1', :with => '10')
     fill_in('side 2', :with => '10')
-    fill_in('side 3', :with => '10')
+    fill_in('side 3', :with => '15')
     click_button('Send')
-    expect(page).to have_content('Equilateral Triangle')
+    expect(page).to have_content("Isosceles Triangle")
   end
 end

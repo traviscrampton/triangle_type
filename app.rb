@@ -8,9 +8,9 @@ get('/') do
 end
 
 get('/result') do
-  side_1 = params.fetch('side 1')
-  side_2 = params.fetch('side 2')
-  side_3 = params.fetch('side 3')
-  @triangle = Triangle.new(side_1, side_2, side_3)
+  s1 = params.fetch('side 1').to_i()
+  s2 = params.fetch('side 2').to_i()
+  s3 = params.fetch('side 3').to_i()
+  @triangle = Triangle.new(s1, s2, s3)
   erb(:result)
 end
